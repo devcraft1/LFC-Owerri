@@ -1,6 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
+This project is strictly a property of LFC Owerri church Headquarters.
 
 In the project directory, you can run:
 

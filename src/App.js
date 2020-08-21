@@ -1,25 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Home from "./component/Home";
+// import Home from './component/Home'
+import { Switch, Route, Router } from "./util/router.js"
+// import { ProvideAuth } from "./../util/auth.js";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // <ProvideAuth>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          {/* <Route exact path="/contact" component={Contact} /> */}
+          <Route
+            component={({ location }) => {
+              return (
+                <div
+                  style={{
+                    padding: "50px",
+                    width: "100%",
+                    textAlign: "center"
+                  }}
+                >
+                  The page <code>{location.pathname}</code> could not be found.
+                </div>
+              );
+            }}
+          />
+        </Switch>
+      </Router>
+    // </ProvideAuth>
   );
 }
 
