@@ -1,0 +1,33 @@
+.footerGeneral{
+    background-color: black
+}
+.footerAll{
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    /* background-color: lightblue; */
+}
+
+.contactLink{
+    align-content: center;
+    list-style: none;   
+}
+
+.contactLink a{
+    text-decoration: none;
+    color: white;
+}
+
+.contactLink:hover{
+    background-color: red;
+}
+
+
+.greenLogo{
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    background-color:white; 
+}
+
+
